@@ -1,4 +1,4 @@
-const Ninjas = ({ ninjas }) => {
+const Ninjas = ({ ninjas, deleteNinja }) => {
   // const { ninjas } = props;
   // // console.log(props);
   // const ninjaList = ninjas.map((ninja) => {
@@ -31,6 +31,8 @@ const Ninjas = ({ ninjas }) => {
             <div>Name: {ninja.name}</div>
             <div>Age: {ninja.age}</div>
             <div>Belt: {ninja.belt}</div>
+
+            <button onClick={() => deleteNinja(ninja.id)}>Delete ninja</button>
           </div>
         ) : null;
       })}
